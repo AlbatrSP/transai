@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сервис перевода документов</title>
+</head>
+<body>
+    <h1>Сервис перевода документов</h1>
+
+    <!-- Форма ввода email и номера телефона -->
+    <h2>Вход</h2>
+    <form id="loginForm">
+        Email: <input type="email" id="email" required><br>
+        Мобильный телефон: <input type="tel" id="phone" required><br>
+        <button type="submit">Войти</button>
+    </form>
+
+    <!-- Форма пополнения баланса -->
+    <h2>Пополнение баланса</h2>
+    <form id="balanceForm">
+        Сумма: <input type="number" id="amount" min="1" required><br>
+        <button type="submit">Пополнить</button>
+    </form>
+
+    <!-- Форма загрузки документа -->
+    <h2>Загрузка документа</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="document" accept=".pdf,.doc,.jpeg" required><br>
+        <button type="submit">Загрузить документ</button>
+    </form>
+
+    <!-- Форма выбора услуги перевода -->
+    <h2>Выбор услуги</h2>
+    <form id="serviceForm">
+        Язык перевода: <select id="language">
+            <option value="en">Английский</option>
+            <option value="ru">Русский</option>
+            <!-- Добавьте другие языки по необходимости -->
+        </select><br>
+        Формат документа: <select id="format">
+            <option value="pdf">PDF</option>
+            <option value="doc">DOC</option>
+        </select><br>
+        <button type="submit">Перевести</button>
+    </form>
+
+    <!-- Место для отображения переведённого документа -->
+    <h2>Переведённый документ</h2>
+    <div id="translatedDocument"></div>
+
+    <script>
+        // Здесь будет JavaScript для обработки форм и общения с сервером
+    </script>
+</body>
+</html>
